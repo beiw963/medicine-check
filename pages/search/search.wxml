@@ -3,7 +3,7 @@
     <view class="search-container">
       <input 
         class="search-input" 
-        placeholder="请输入药品名称或商品名" 
+        placeholder="请输入药品名称或商品名称" 
         bindinput="onSearch"
         value="{{searchValue}}"
       />
