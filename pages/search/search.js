@@ -1,4 +1,27 @@
-const medicineData = require('../../datas/tableData.js')
+const sheetData = require('../../datas/sheetData.js')
+const tableData = require('../../datas/tableData.js')
+
+// Combine and deduplicate the data based on name and manufacturer
+const medicineData = [...sheetData, ...tableData].reduce((unique, item) => {
+  // Create a unique key combining name and manufacturer
+  const key = `${item.name}-${item.manufacturer}`
+  
+  // Check if we already have this combination
+  const exists = unique.find(u => 
+    `${u.name}-${u.manufacturer}` === key
+  )
+  
+  // Only add if it doesn't exist yet
+  if (!exists) {
+    unique.push(item)
+  }
+  
+  return unique
+}, [])
+
+// Log the deduplication results
+console.log('Original records:', sheetData.length + tableData.length)
+console.log('After deduplication:', medicineData.length)
 
 Page({
   data: {
@@ -18,8 +41,8 @@ Page({
       defaultResults: initialRecords,
       hasMore: medicineData.length > this.data.pageSize
     })
-    // console.log('Loaded initial records:', initialRecords.length)
-    // console.log('Total records available:', medicineData.length)
+    console.log('Loaded initial records:', initialRecords.length)
+    console.log('Total records available:', medicineData.length)
   },
 
   onShow() {

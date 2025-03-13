@@ -12,7 +12,7 @@
 
 .search-container {
   width: 100%;
-  margin: 20rpx auto;
+  margin: 10rpx auto;
   position: relative;
   display: flex;
   align-items: center;
@@ -39,6 +39,11 @@
   color: #999;
   font-size: 30rpx;
   z-index: 1;
+}
+
+.notification {
+  font-size: 22rpx;
+  color: #999;
 }
 
 .search-results {
