@@ -1,0 +1,110 @@
+.container {
+  padding: 0;
+}
+.menu-list {
+  background: #ffffff;
+  border-radius: 10rpx;
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  padding-left: 60rpx;
+  border-radius: 10rpx;
+  justify-content: flex-start;
+}
+
+.menu-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+}
+
+.menu-text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+}
+
+.modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modal-header {
+  padding: 20rpx;
+  text-align: center;
+  font-size: 32rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-body {
+  padding: 30rpx;
+}
+
+.input-group {
+  margin-bottom: 20rpx;
+}
+
+.label {
+  display: block;
+  margin-bottom: 10rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10rpx;
+  font-size: 28rpx;
+}
+
+textarea.input {
+  height: 200rpx;
+}
+
+.modal-footer {
+  display: flex;
+  padding: 20rpx;
+  border-top: 1px solid #eee;
+}
+
+.cancel-btn, .submit-btn {
+  flex: 1;
+  margin: 0 10rpx;
+  font-size: 28rpx;
+}
+
+.submit-btn {
+  background: #07c160;
+  color: #fff;
+} 

@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="menu-list">
+    <view class="menu-item" bindtap="onFavoritesTap">
+      <image class="menu-icon" src="/icons/feedback.png"></image>
+      <text class="menu-text">反馈</text>
+    </view>
+  </view>
+
+  <!-- Add feedback modal -->
+  <view class="modal" hidden="{{!showFeedbackModal}}">
+    <view class="modal-mask"></view>
+    <view class="modal-content">
+      <view class="modal-header">
+        <text>提交反馈</text>
+      </view>
+      <view class="modal-body">
+        <view class="input-group">
+          <text class="label">描述</text>
+          <textarea class="input" placeholder="请输入反馈内容" bindinput="onDescriptionInput" value="{{description}}"></textarea>
+        </view>
+      </view>
+      <view class="modal-footer">
+        <button class="cancel-btn" bindtap="onCancelFeedback">取消</button>
+        <button class="submit-btn" bindtap="onSubmitFeedback">提交</button>
+      </view>
+    </view>
+  </view>
+</view> 
